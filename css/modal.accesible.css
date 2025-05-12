@@ -1,0 +1,366 @@
+/*Menú Accesible */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--white);
+    padding: 0.5rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    height: 90%;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    animation: aparecer 0.3s ease;
+}
+
+.modal-scroll {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x:hidden;
+    width: 100%;
+    min-height: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /*border-radius: 0 0 12px 12px;*/
+}
+
+.modal-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.info-modal {
+    
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.modal-title {
+    font-size: 2rem;
+    font-family: var(--typeB-folder);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.modal-descripcion {
+    font-size: 1rem;
+    font-family: var(--p-regular);
+    text-align: center;
+    max-width: 600px;
+    color: var(--text-color);
+}
+
+.accesibilidad-panel {
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    background-color: var(--white);
+    border: 1px solid var(--text-color);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.header-p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.accesibilidad-panel.closed .header-p {
+    flex-direction: row;
+}
+
+.accesibilidad-panel.open .header-p {
+    flex-direction: row;
+}
+
+.header-p h2 {
+    font-family: var(--typeB-folder);
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    flex-grow: 1;
+    color: var(--text-color);
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-grow: 1;
+}
+
+.header-info svg {
+    width: 32px;
+    height: 32px;
+    fill: var(--text-color);
+    color: var(--text-color);
+}
+
+
+#toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    margin-left: auto;
+}
+
+
+#toggle svg {
+    width: 32px;
+    height: 32px;
+    fill: var(--text-color);
+    color: var(--text-color);
+}
+
+#toggle .icon-open,
+#toggle .icon-close {
+
+    width: 30px;
+    height: 30px;
+}
+
+
+.icon-open {
+    display: block;
+}
+
+.icon-close {
+    display: none;
+}
+
+.accesibilidad-panel.accesibilidad-panel.closed .perfiles {
+    display: none;
+}
+
+
+.accesibilidad-panel.closed .icon-open {
+    display: block;
+}
+
+.accesibilidad-panel.closed .icon-close {
+    display: none;
+}
+
+.accesibilidad-panel.open .icon-open {
+    display: none;
+}
+
+.accesibilidad-panel.open .icon-close {
+    display: block;
+}
+
+
+
+.accesibilidad-panel.closed {
+    padding: 0.5rem 1rem;
+    background-color: var(--white);
+    border: 1px solid var(--disable);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.accesibilidad-panel.open {
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--disable);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.accesibilidad-panel.open .perfiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+
+}
+
+
+.header-p svg, img {
+    width: 32px;
+    height: 32px;
+    color: var(--folder-back-color);
+}
+
+
+.perfiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+
+.perfil-card {
+    background-color: var(--white);
+    border: 1px solid var(--disable);
+    border-radius: 8px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.perfil-card svg {
+    width: 40px;
+    height: 40px;
+}
+
+.perfil-card span {
+    font-family: var(--p-bold);
+    font-size: 1rem;
+    color: var(--text-color);
+
+}
+
+
+/*Mini tarejtas*/
+
+.accesibilidad-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.tarjeta {
+    background-color: var(--white);
+    border: 1px solid var(--disable);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.tarjeta:hover, .tarjeta:focus {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+
+.tarjeta svg {
+    width: 45px;
+    height: 45px;
+    fill: var(--text-color);
+}
+
+.tarjeta h3 {
+    font-family: var(--typeB-folder);
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    color: var(--text-color);
+    
+}
+
+.tarjeta p {
+    font-family: var(--p-regular);
+    font-size: 0.7rem;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+    line-height: 1.2;
+    
+}
+
+.selector {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--disable);
+    border-radius: 50%;
+    margin-top: 1rem;
+    background: none;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.selector::after {
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: var(--folder-back-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+
+.tarjeta.seleccionada {
+    border: 2px solid var(--folder-back-color);
+}
+
+.tarjeta.seleccionada .selector {
+    border-color: var(--folder-back-color);
+}
+
+.tarjeta.tarjeta.seleccionada .selector::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+

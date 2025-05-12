@@ -1,0 +1,94 @@
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--neutral);
+    font-family: var(--font-regular);
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+  }  
+
+#score {
+    font-family: var(--typeB-folder);
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    color: #000;
+  }
+  
+  #game-board {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 260px;
+  }
+  
+  #game-board > div {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  #fin-juego {
+    font-family: var(--typeB-folder);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    text-align: center;
+    padding: 100px 0;
+    display: none;
+  }
+
+  #fin-juego button {
+    font-family: var(--type-folder);
+    font-size: 1.2rem;
+    background: var(--primary);
+    color: var(--bg-dark);
+    border-color: #00aacc;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    cursor: none;
+    transition: background-color 0.3s ease;
+  }
+
+  #fin-juego button:hover {
+    background-color: #00aacc;
+  }
+
+  #fin-juego h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #000;
+    margin: 2rem;
+  }
+
+  .volver-inicio {
+    position: fixed;
+    top: 30px;
+    left: 50px;
+    z-index: 1000;
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #000;
+    color: var(--white);
+    font-family: var(--p-bold);
+    font-size: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .volver-inivio:hover,
+  .volver-inicio:focus {
+    background-color: var(--folder-back-color);
+    color: (var(--white));
+  }
+  

@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(45deg, #ff4081, #7c4dff);
+    color: #fff;
+    animation: colorCycle 10s infinite alternate;
+    cursor: none;
+    margin: 20px;
+}
+
+@keyframes colorCycle {
+    0% {background: #ff4081;}
+    50% {background: #ffd740;}
+    100% {background: #7c4dff;}
+}
+
+.barra-titulo {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding: 2rem;
+}
+
+.barra-titulo h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.cursor-line-wrapper {
+    position: absolute;
+    width: 100px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+    z-index: 9000;
+}
+
+.linea {
+    height: 15px;
+    width: 300%;
+    background: #000;
+    border-radius: 10px;
+}
+
+.triangulo {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #000;
+}
+
+
+main {
+    padding: 2rem;
+}
+
+.intro h2,
+.contenido h2 {
+    font-family: var(--typeB-folder);
+}
+
+.parrafo-parpadeante {
+    animation: parpadeo 1s infinite alternate;
+}
+
+@keyframes parpadeo {
+    from { color: #fff;}
+    to { color: #ffd740;}
+}
+
+.alerta {
+    background: #6e4c93;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.cuadricula {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, min-max(150px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cuadricula button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cuadricula button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.1);
+    font-style: italic;
+}
+
+
+.volver-inicio {
+    position: fixed;
+    top: 15px;
+    left: 30px;
+    z-index: 1000;
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--white);
+    color: #000;
+    font-family: var(--p-bold);
+    font-size: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  
+
+

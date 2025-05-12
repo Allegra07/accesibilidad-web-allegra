@@ -1,0 +1,71 @@
+
+
+#titulo-dislexia span {
+    font-family: var(--p-regular);
+    transition: font-family 0.3s ease;
+}
+
+#titulo-dislexia span.active {
+    font-family: var(--type-dislexia);
+}
+
+.dislexia-page {
+  background-color: #000;
+  color: var(--white);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.dislexia-text {
+  font-size: 7rem;
+  transition: font-family 0.3s ease;
+  letter-spacing: 0.2em;
+}
+
+.dislexia-text span {
+  display: inline-block;
+  transition: font-family 0.3s ease, transform 0.2s ease;
+}
+
+.dislexia-text span.active {
+  font-family: 'Comic Neue', cursive;
+  transform: rotate(-5deg);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.volver-inicio {
+  position: fixed;
+  top: 30px;
+  left: 50px;
+  z-index: 1000;
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--white);
+  color: #000;
+  font-family: var(--p-bold);
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.volver-inivio:hover,
+.volver-inicio:focus {
+  background-color: var(--folder-back-color);
+  color: #000;
+}

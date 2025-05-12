@@ -1,0 +1,61 @@
+  /*Visión baja*/
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 20vw;
+    color: var(--purple);
+    text-transform: uppercase;
+    line-height: 1;
+    user-select: none;
+    overflow: visible;
+  }
+
+  
+  .blurred-text {
+    filter: blur(14px);
+    z-index: 0;
+    display: inline-block;
+  }
+
+  .clear-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    font: inherit;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    mask-image: none;
+    -webkit-mask-image: none;
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+
+  .volver-inicio {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    z-index: 1000;
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  
