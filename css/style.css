@@ -19,33 +19,33 @@
 
 @font-face {
     font-family:'UbuntuMono-Regular';
-    src: url('assets/fonts/UbuntuMono-Regular.woff2') format('woff2');
+    src: url('../assets/fonts/UbuntuMono-Regular.woff2') format('woff2');
 }
 
 @font-face {
     font-family:'UbuntuMono-Bold';
-    src: url('assets/fonts/UbuntuMono-Bold.woff2') format('woff2');
+    src: url('../assets/fonts/UbuntuMono-Bold.woff2') format('woff2');
 }
 
 @font-face {
     font-family:'Lato-Regular';
-    src: url('assets/fonts/Lato-Regular.woff') format('woff');
+    src: url('../assets/fonts/Lato-Regular.woff') format('woff');
 }
 
 
 @font-face {
     font-family:'Lato-Bold';
-    src: url('assets/fonts/Lato-Bold.woff') format('woff');
+    src: url('../assets/fonts/Lato-Bold.woff') format('woff');
 }
 
 @font-face {
     font-family:'Dislexia-regular';
-    src: url('assets/fonts/OpenDyslexic-Regular.woff') format('woff');
+    src: url('../assets/fonts/OpenDyslexic-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family:'Dislexia-bold';
-    src: url('assets/fonts/OpenDyslexic-Bold.woff') format('woff');
+    src: url('../assets/fonts/OpenDyslexic-Bold.woff') format('woff');
 }
 
   
